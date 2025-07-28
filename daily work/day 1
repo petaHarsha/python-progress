@@ -1,0 +1,102 @@
+#conditional expressions
+num = 5
+a=6
+b=7
+age=25
+#print("positive" if num > 0 else "negative or zero")
+#result = "even" if num % 2 == 0 else "odd"
+#max = num if a > b else b
+#min = num if a < b else b
+#status= "adult" if age >= 18 else "minor" when age is less than 18
+#name=input("enter the fulll name:")
+#result = len(name) #returns the length of the string
+#space=name.find(" ") find first space
+#space=name.rfind(" ") find last space
+#name=name.capitalize() only first letter capitalized
+#name=name.upper()  all letters capitalized
+#name=name.lower()  all letters in lower case
+#name=name.title()  #first letter of each word capitalized
+#name=name.strip()  #removes leading and trailing spaces
+#name=name.replace(" ","")  #removes all spaces
+#name=name.replace(" ","_")  #replaces spaces with underscores
+#name=name.split()  #splits the string into a list of words
+#split=name.split(" ")  #splits the string into a list of words using space as delimiter
+#allnumbers=name.isdigit()  #checks if the string contains only digits
+#allalphabets=name.isalpha()  #checks if the string contains only letters
+#count=name.count(" ")  #counts the number of spaces in the string
+#centerspace=name.center(50)  #centers the string in a field of 50 characters
+#extract=name[0:5]  #extracts the first 5 characters
+#encode=name.encode()  #encodes the string to bytes
+#end=name.endswith("Smith")  #checks if the string ends with "Smith"
+#case=name.casefold()  #converts the string to lowercase for case-insensitive comparisons
+#index=name.index(" ")  #finds the index of the first space
+
+
+#indexing = accessing elements in a sequence using []
+#                    [start:stop:step]
+#slicing = extracting a portion of a sequence using [start:stop:step]
+#
+
+
+
+
+
+
+
+
+# format specifiers = {value:flags} format a value based on what flags are specified/inserted
+#              
+print(f"print age: {age:02d}")
+#.1f = float value with 1 decimal placen                                  exaple: 3.1
+#.2f = float value with 2 decimal places                                  example: 3.14
+#:10 = integer value with 10 characters wide                              example: 0000000005
+#:010 = integer value with 10 characters wide, padded with zeros          example: 0000000005
+#:>10 = right aligned integer value with 10 characters wide               exapmle:      5
+#:10s = string value with 10 characters wide                              example: '     hello' (padded with spaces)
+#:<10 = left aligned integer value with 10 characters wide                example: 5         (padded with spaces)
+#:{width}.{precision}f = float value with specified width and precision   example: 3.14  with width 5 and precision 2 width does not include the decimal point
+#:+ = always show the sign of the number (positive or negative)           example: +5 or -5
+#:,d = integer value with thousands separator                            example: 1,000,000
+#:{width} = integer value with specified width                           example: 0000000005 with width 10
+#:, = integer value with thousands separator                              example: 1,000,000
+#:{width}d = integer value with specified width                          example: 0000000005 with width 10
+#:{width}b = binary value with specified width                            example: 000000000101 with width 10
+#:^10 = center aligned integer value with 10 characters wide              example:    5     (padded with spaces)
+#:{width}o = octal value with specified width                             example: 0000000005 with width 10
+#:{width}x = hexadecimal value with specified width                       example: 0000000005 with width 10
+#:{width}X = uppercase hexadecimal value with specified width             example: 0000000005 with width 10
+#:{width}e = scientific notation with specified width                     example: 5.00e+00 with width 10
+#:{width}g = general format with specified width                          example: 5.00 with width 10
+#:{width}c = character with specified width                              example: '     a' (padded with spaces)
+#what does witdth precision mean? width is the total number of characters including the decimal point 
+# and the digits after it. precision is the number of digits after the decimal point.
+#example: 3.14 with width 5 and precision 2 will be printed as ' 3.14' (2 digits after the decimal point, total 5 characters wide)
+
+
+
+
+
+
+
+
+
+#for loop = executing a block a fixed number of times, iterating over a sequence (like a list or string or range or tuple)
+# while loop = executing a block of code as long as a condition is true
+
+#reversed function = reverses the order of elements in a sequence
+#reversed_list = list(reversed([1, 2, 3, 4, 5]))  #reverses the list output: [5, 4, 3, 2, 1]
+
+'''#range function = generates a sequence of numbers, often used in for loops
+import time 
+x=5
+for i  in range(x,0,-1): # what -1 does is it decrements the value of i by 1 each time 
+    #. why not usejust range(x,0) ? because range(x,0) will not include 0 in the output
+    #. range(x,0) will give you [5,4,3,2,1] but we want to include 0 in the output
+    #. so we use range(x,0,-1) which will give you [5,4,3,2,1,0] .
+    # how are we able to include 0 in the output? because we are decrementing
+    # the value of i by 1 each time, so when i reaches 0, it will be included in the output
+    #step by step ,first i=5, then i=4, then i=3, then i=2, then i=1, then i=0
+    print(i)#when executing this code, it will print the numbers from 5 to 0 in descending order
+     
+print ("times up!")    
+'''
