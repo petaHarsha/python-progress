@@ -1,0 +1,134 @@
+
+#nested loops = a loop within another loop, 
+# used for iterating over multi-dimensional data structures like lists of lists
+#                outerloop:
+  #                  innerloop:
+
+
+'''
+for i in range(3):  # outer loop
+    for j in range(1,10):  # inner loop
+        print(j, end=' ')  
+    print()  
+    '''
+# this will print a multiplication table of 1 to 9 ,3 times
+
+
+
+
+#list vs array = a list is a built-in data type in python that can store multiple values, 
+# while an array is a data structure that can store multiple values of the same data type
+##collections = a single variable used to store multiple values, like a list, tuple, dictionary, or set
+#collections = singele "variable" used to store multiple values
+#list = ordered, mutable, allows duplicates, defined with []
+#tuple = ordered, immutable, allows duplicates, defined with ()
+   
+    #difference between ordered and unordered:
+                # ordered = the order of elements is preserved, meaning the first element will always be the first element
+                # unordered = the order of elements is not preserved, meaning the first element may not always be the first element
+    #difference between mutable and immutable:
+                # mutable = the elements can be changed, added, or removed after creation
+                # immutable = the elements cannot be changed, added, or removed after creation
+
+#dictionary = unordered, mutable, allows duplicates, defined with {}
+# set = unordered, mutable, does not allow duplicates, defined with {}
+#list comprehension = a concise way to create lists using a single line of code
+#dictionary comprehension = a concise way to create dictionaries using a single line of code
+#tuple unpacking = assigning values from a tuple to multiple variables in a single line
+#list unpacking = assigning values from a list to multiple variables in a single line
+#dictionary unpacking = assigning values from a dictionary to multiple variables in a single line
+'''fruits = ["apple", "banana", "cherry", "date"]
+print(len(fruits))                     # prints the length of the list
+print("watermelon" in fruits)          # checks if "watermelon" is in the list
+                                       #using index you can accessand and reassign values in the list
+fruits[0] = "kiwi"                     # changes the first element to "kiwi"
+fruits.append("orange")                # adds "orange" to the end of the list
+fruits.insert(1, "grape")              # inserts "grape" at index 1
+fruits.remove("kiwi")                  # removes "kiwi" from the list
+fruits.pop()                           # removes the last element from the list
+fruits.sort()                          # sorts the list in ascending order
+fruits.reverse()                       # reverses the order of the list
+fruits.clear()                         # removes all elements from the list
+fruits_copy = fruits.copy()            # creates a shallow copy of the list
+fruits.extend(["pear", "peach"])       # adds multiple elements to the end of the list
+fruits.count("banana")                 # counts how many times "banana" appears in the list
+fruits.index("cherry")                 # finds the index of "cherry" in the list
+friuit.add("orange")                   # adds an element to the set
+for x in fruits:
+    print(x)  # prints each fruit in the list
+'''
+#if you ever forget what methods to use ,use "print(help(fruits))" to get help on the list object
+#dir() is a built-in function that returns a list of attributes and methods of an object
+
+
+'''
+foods=[]
+prices=[]
+total=0
+while True:
+    food=input("enter food to buy (q to quit): ")
+    if food.lower() == 'q':
+        break
+    else:
+        price=float(input(f"enter price for {food}: "))
+        foods.append(food)
+        prices.append(price)
+print("-------your order-------")
+for food in foods:
+    print(food, end=' ')
+for price in prices:
+    total+=price
+print(f"\ntotal price = {total}")
+print(f"total price ={sum(prices):^6}")
+'''
+
+
+#2d lists   =    lists of lists, used to represent matrices or tables
+#a lis made up of lists, where each list can have different lengths
+#list=[list1, list2, list3]    example: list=[[1,2,3],[4,5,6],[7,8,9]]
+
+#numpad:
+'''
+numpad = ((1,2,3),(4,5,6),(7,8,9),('#',0,'*'))
+for row in numpad:
+    for col in row:
+        print(col, end=' ')
+    print()  
+'''
+
+
+
+
+'''
+
+#dictionary = a collection of key-value pairs, where each key is unique and maps to a value
+capitals={"USA":"Washington DC", "India":"New Delhi", "Japan":"Tokyo"}
+ # creates a dictionary with country names as keys and their capitals as values
+if capitals.get("USA"):
+    print("that capital exists")
+else:
+    print("that capital does not exist")
+                                #get method = returns the value for the specified key if it exists, otherwise returns None 
+                                #update method = updates the value for the specified key if it exists, otherwise adds a new key-value pair
+                                #pop method = removes the specified key-value pair and returns the value
+                                #popitem method = removes and returns the last key-value pair added to the dictionary
+                                #clear method = removes all key-value pairs from the dictionary
+keys = capitals.keys()          # returns a view object of the keys in the dictionary
+values = capitals.values()      # returns a view object of the values in the dictionary
+for keys in capitals.keys():    # "in" is used to iterate over the keys in the dictionary
+    print(keys)                 # prints each key in the dictionary
+items = capitals.items()        # returns a view object of the key-value pairs in the dictionary
+#output = [('USA', 'Washington DC'), ('India', 'New Delhi'), ('Japan', 'Tokyo')]
+#realy useful for iterating over both keys and values at the same time
+
+for key, value in capitals.items():  # iterates over both keys and values in the dictionary
+    print(f"{key}: {value}")  # prints each key-value pair in the dictionary
+    #output:
+    #USA: Washington DC
+    #India: New Delhi
+    #Japan: Tokyo
+#dictionary comprehension = a concise way to create dictionaries using a single line of code
+#example: {key: value for key, value in iterable}
+#example: {x: x**2 for x in range(5)}  # creates a dictionary with keys as numbers and values as their squares
+#output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+'''
