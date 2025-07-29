@@ -20,3 +20,4 @@ This marks a fresh start where I aim to code more, learn actively, and grow as a
 
 
 you know what! chatgpt is the best make a amateur persepective look soo professional in my opinion
+
