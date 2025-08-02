@@ -1,0 +1,35 @@
+import random
+
+lowest = 1
+highest = 100
+answer = random.randint(lowest, highest)
+
+print("Python Number Guessing Game")
+print(f"Select a number between {lowest} and {highest}")
+
+guesses = 0
+is_running = True
+
+# Uncomment the next line for testing ,only if you need 
+# print(f"[DEBUG] The answer is: {answer}")
+
+while is_running:
+    try:
+        guess = int(input("Enter your guess: "))
+        guesses += 1
+
+        if guess == answer:
+            print(f"🎉 You guessed it right in {guesses} attempts! The number was {answer}.")
+            is_running = False
+
+        elif guess < answer:
+            print("Too low! Try again.")
+        else:
+            print("Too high! Try again.")
+
+        if guesses >= 10 and guess != answer:
+            print(f"❌ You've used all 10 guesses. The number was {answer}. Game over.")
+            break
+#for people who dont know what does try do just google it or just short discription:when you want a friendly "you messed up" message for the error you know ,it may occur
+    except ValueError:
+        print("Please enter a valid integer.")
